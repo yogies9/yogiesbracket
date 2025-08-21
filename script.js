@@ -76,7 +76,7 @@ function checkout(){
   const total = cart.reduce((n,it)=>n + it.harga*it.qty, 0);
   const buyer = prompt('Nama & Kota (opsional):', '');
   const msg = `Halo Yogies, saya ingin order:%0A${lines.join('%0A')}%0A%0ATotal: Rp ${formatRupiah(total)}%0A${buyer ? 'Pemesan: ' + encodeURIComponent(buyer) : ''}`;
-  const url = `https://wa.me/62831712977127{WA_NUMBER}?text=${msg}`;
+  const url = `https://wa.me/62831712977127?text=${msg}`;
   window.open(url, '_blank');
 }
 
